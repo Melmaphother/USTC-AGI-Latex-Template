@@ -1,0 +1,73 @@
+\documentclass[]{ustc_conference}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage[edges]{forest}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage[toc,page,header]{appendix}
+\usepackage{bbm}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+\newcommand{\name}[1]{Project Name}
+\newcommand{\hardware}[1]{Hardware Name}
+\newcommand{\bo}{\mathbf{o}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bs}{\mathbf{s}}
+
+\newcommand{\yf}[1]{\textcolor{purple}{[Comment:#1]}}
+\newcommand{\mx}[1]{\textcolor{blue}{[Note:#1]}}
+
+\renewcommand{\paragraph}[1]{\vspace{0.1em}\noindent\textbf{#1}}
+
+\title{Anonymous Paper Title}
+
+\author{%
+\parbox{\textwidth}{\centering
+Anon. Author\frontsup{\equalcontrib 1}, Anon. Author\frontsup{\equalcontrib 1}, Anon. Author\frontsup{\equalcontrib 2\coauthornote}, Anon. Author\frontsup{\equalcontrib 3\coauthornote}\\[2mm]
+Anon. Author\frontsup{4}, Anon. Author\frontsup{1}, Anon. Author\frontsup{1}, Anon. Author\frontsup{1\corrauthor}\\[2mm]
+Anon. Author\frontsup{\equalcontrib\projectlead}
+}}
+
+\affiliation{%
+\parbox{\textwidth}{\centering
+\affilsup{1}Anon. Institution,
+\affilsup{2}Anon. Institution,
+\affilsup{3}Anon. Institution\\[1mm]
+\affilsup{4}Anon. Institution,
+\affilsup{5}Anon. Institution
+}}
+
+
+
+\contribution[*]{Equal contribution}
+\contribution[\mathsection]{Corresponding Author}
+\contribution[\dagger]{Project lead}
+
+\correspondence{\email{anonymous@anonymous.edu}}
+
+\abstract{
+Replace this abstract with a concise summary of the problem, method, results, and conclusions for your paper.
+}
+
+\checkdata[Project Page]{\url{https://example.com}}
+
+\checkdata[Document]{\url{https://example.com}}
+
+\begin{document}
+\maketitle
+
+\input{sections/1-Introduction}
+\input{sections/2-Related-Work}
+\input{sections/3-Method}
+\input{sections/4-Experiments}
+\input{sections/5-Conclusion}
+\bibliographystyle{plainnat}
+\bibliography{main}
+\input{sections/6-Acknowledgments}
+
+\end{document}
