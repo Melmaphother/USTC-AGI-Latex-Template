@@ -12,62 +12,64 @@
 \usepackage{bbm}
 \usepackage{enumitem}
 \usepackage{mathtools}
+\setlength{\headheight}{45pt}
 
-\newcommand{\name}[1]{Project Name}
-\newcommand{\hardware}[1]{Hardware Name}
 \newcommand{\bo}{\mathbf{o}}
 \newcommand{\ba}{\mathbf{a}}
 \newcommand{\bs}{\mathbf{s}}
 
-\newcommand{\yf}[1]{\textcolor{purple}{[Comment:#1]}}
-\newcommand{\mx}[1]{\textcolor{blue}{[Note:#1]}}
+\newcommand{\placeholderbox}[2]{
+  \fbox{
+    \parbox[c][#2][c]{0.92\linewidth}{
+      \centering
+      \textbf{#1}
+    }
+  }
+}
 
 \renewcommand{\paragraph}[1]{\vspace{0.1em}\noindent\textbf{#1}}
 
-\title{Anonymous Paper Title}
+\title{Paper Title Placeholder}
 
 \author{%
 \parbox{\textwidth}{\centering
-Anon. Author\frontsup{\equalcontrib 1}, Anon. Author\frontsup{\equalcontrib 1}, Anon. Author\frontsup{\equalcontrib 2\coauthornote}, Anon. Author\frontsup{\equalcontrib 3\coauthornote}\\[2mm]
-Anon. Author\frontsup{4}, Anon. Author\frontsup{1}, Anon. Author\frontsup{1}, Anon. Author\frontsup{1\corrauthor}\\[2mm]
-Anon. Author\frontsup{\equalcontrib\projectlead}
+Author A\frontsup{\equalcontrib 1},
+Author B\frontsup{\equalcontrib 2},
+Author C\frontsup{1\corrauthor}
 }}
 
 \affiliation{%
 \parbox{\textwidth}{\centering
-\affilsup{1}Anon. Institution,
-\affilsup{2}Anon. Institution,
-\affilsup{3}Anon. Institution\\[1mm]
-\affilsup{4}Anon. Institution,
-\affilsup{5}Anon. Institution
+\affilsup{1}Affiliation Placeholder One \\
+\affilsup{2}Affiliation Placeholder Two
 }}
 
-
-
 \contribution[*]{Equal contribution}
-\contribution[\mathsection]{Corresponding Author}
-\contribution[\dagger]{Project lead}
+\contribution[\mathsection]{Corresponding author}
 
-\correspondence{\email{anonymous@anonymous.edu}}
+\date{Month Day, Year}
+\correspondence{\email{corresponding.author@example.com}}
 
 \abstract{
-Replace this abstract with a concise summary of the problem, method, results, and conclusions for your paper.
+This is an abstract placeholder. Replace this paragraph with a concise summary of the paper's motivation, method, main findings, and conclusions.
 }
 
-\checkdata[Project Page]{\url{https://example.com}}
-
-\checkdata[Document]{\url{https://example.com}}
+\checkdata[Project Page]{\url{https://example.com/project}}
+\checkdata[Code]{\url{https://github.com/your-org/your-repo}}
 
 \begin{document}
+
 \maketitle
 
+\input{tables/1}
 \input{sections/1-Introduction}
 \input{sections/2-Related-Work}
 \input{sections/3-Method}
 \input{sections/4-Experiments}
 \input{sections/5-Conclusion}
+\input{sections/6-Acknowledgments}
+
 \bibliographystyle{plainnat}
 \bibliography{main}
-\input{sections/6-Acknowledgments}
 
 \end{document}
